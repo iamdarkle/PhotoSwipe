@@ -15,23 +15,8 @@ use Flarum\Frontend\Document;
 return [
     (new Extend\Frontend('forum'))
         ->content(function (Document $document) {
-            $document->head[] = '<script type="module">
-            // Include Lightbox 
-            import PhotoSwipeLightbox from 'js/dist/photoswipe-lightbox.esm.js';
-            
-            const lightbox = new PhotoSwipeLightbox({
-              // may select multiple "galleries"
-              gallery: '#gallery--simple',
-            
-              // Elements within gallery (slides)
-              children: 'a',
-            
-              // Include PhotoSwipe Core
-              // and use absolute path (that starts with http(s)://)
-              pswpModule: 'js/dist/photoswipe.esm.js'
-            });
-            lightbox.init();
-            </script>';
+            $document->head[] = '<script defer type="text/javascript" src="js/dist/photoswipe.esm.js"></script>';
+            $document->head[] = '<script defer type="text/javascript" src="js/dist/photoswipe-lightbox.esm.js"></script>';
             $document->head[] = '<link rel="preload" as="style" href="css/dist/photoswipe.css" onload="this.onload=null;this.rel=\'stylesheet\'">';
             $document->foot[] = <<<HTML
 <script>
