@@ -19,15 +19,15 @@ return [
             $document->head[] = '<script defer type="text/javascript" src="js/dist/photoswipe-lightbox.esm.js"></script>';
             $document->head[] = '<link rel="preload" as="style" href="css/dist/photoswipe.css" onload="this.onload=null;this.rel=\'stylesheet\'">';
             $document->foot[] = <<<HTML
-<script>
+<script type="module">
 flarum.core.compat.extend.extend(flarum.core.compat['components/CommentPost'].prototype, 'oncreate', function (output, vnode) {
     const self = this;
     this.$('img').not('.emoji').not(".Avatar").not($(".PostMeta-ip img")).each(function () {
         
         const lightbox = new PhotoSwipeLightbox({
-  gallery: '#my-gallery',
+  gallery: '#gallery--simple',
   children: 'a',
-  pswpModule: PhotoSwipe
+  pswpModule: 'js/dist/photoswipe.esm.js'
 });
 lightbox.init();
 
