@@ -29,7 +29,7 @@ flarum.core.compat.extend.extend(flarum.core.compat['components/CommentPost'].pr
   children: 'a',
   pswpModule: PhotoSwipe
 });
-lightbox.init('.Post-body img:not(.emoji):not(.Avatar):not(.PostMeta-ip img)');
+lightbox.init();
 
 
     });
