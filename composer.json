@@ -1,0 +1,38 @@
+{
+    "name": "photoswipe/flarum",
+    "description": "Enables PhotoSwipe on all images",
+    "type": "flarum-extension",
+    "keywords": ["flarum","images","photoswipe"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Darkle",
+            "email": "tomasromero@outlook.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/iamdarkle/PhotoSwipe/issues",
+        "source": "https://github.com/iamdarkle/PhotoSwipe",
+        "forum": "https://discuss.flarum.org"
+    },
+    "require": {
+        "flarum/core": "^1.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "PhotoSwipe\\flarum\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "PhotoSwipe",
+            "category": "feature",
+            "icon": {
+                "name": "far fa-images",
+                "backgroundColor": "#fbe148",
+                "color": "#333333"
+            }
+        }
+    }
+}
