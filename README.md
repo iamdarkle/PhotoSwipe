@@ -1,0 +1,2 @@
+# PhotoSwipe
+Flarum PhotoSwipe
