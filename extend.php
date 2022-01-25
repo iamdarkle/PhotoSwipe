@@ -3,7 +3,7 @@
 /*
  * This file is part of iamdarkle/PhotoSwipe
  *
- * Copyright (c) 2021 Tomás Romero.
+ * Copyright (c) 2022 Tomás Romero.
  *
  * For the full copyright and license information, please view the LICENSE.md
  * file that was distributed with this source code.
